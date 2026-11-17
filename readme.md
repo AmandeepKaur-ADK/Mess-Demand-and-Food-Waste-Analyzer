@@ -89,7 +89,7 @@ Open the local URL that Streamlit prints in the terminal. The app expects the th
 
 - **It is a baseline, not a validated forecast.** The estimate uses only historical per-student medians. The calendar events and menu are displayed as context but are **not** used as adjustment factors, even though the staff say they matter.
 - **Menu combinations are not modelled.** Staff say rice and roti needs depend on which dishes are served together. This tool does not capture that.
-- **No waste calculation.** Leftovers are not recorded, so it cannot say how much was wasted or over-prepared.
+- **No waste calculation.** Leftovers are not recorded, so it cannot say how much was wasted or over-prepared, as we did not have any record for it to track.
 - **Daily totals only.** It cannot estimate separately for breakfast, lunch and dinner.
 - **Estimated headcount.** Errors in `students_served_est` flow into every per-student figure.
 - **Small history.** With few records, medians (especially same-weekday ones) are based on very few days.
@@ -101,6 +101,7 @@ The output supports the staff's decision; it should not replace the cook's judge
 
 ```
 app.py                         Streamlit app
+output/                         contains the screen recording of the tool
 src/
   data_loader.py               load_mess_data, data_quality_report
   preprocessing.py             load_calendar, load_menu, prepare_analysis_data, INGREDIENT_COLUMNS
