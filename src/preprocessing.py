@@ -65,5 +65,11 @@ def add_per_student_features(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def prepare_analysis_data(df: pd.DataFrame, calendar: pd.DataFrame) -> pd.DataFrame:
-    return add_per_student_features(add_context_features(df, calendar))
+def prepare_analysis_data(
+    df: pd.DataFrame, calendar: pd.DataFrame, menu: pd.DataFrame | None = None
+) -> pd.DataFrame:
+    out = add_context_features(df, calendar)
+    if menu is not None:
+        out = attach_menu_context(out, menu)
+    return add_per_student_features(out)
+
