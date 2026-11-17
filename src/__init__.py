@@ -1,0 +1,1 @@
+"""Mess Demand & Food Waste Analyser package."""

@@ -1,29 +1,29 @@
-day,meal,menu_items,menu_source_note,transcription_confidence
-Monday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; aloo paratha; tomato chutney",Revised weekly menu photograph dated 27/09/2026; printed item text transcribed where legible,medium
-Monday,Lunch,"Rice; roti; salad; moong dal; aloo parwal; mixed vegetable curry; achar",Revised weekly menu photograph dated 27/09/2026; some lower-row text is faint,medium
-Monday,Snacks,"Bread pakoda; tea",Revised weekly menu photograph dated 27/09/2026,high
-Monday,Dinner,"Roti; rice; chana dal; soya aloo; gulab jamun",Revised weekly menu photograph dated 27/09/2026,medium
-Tuesday,Breakfast,"Bread; butter; jam; milk; tea; banana/omelette; aloo poha; coconut chutney",Revised weekly menu photograph dated 27/09/2026; handwritten edits are partly unclear,medium
-Tuesday,Lunch,"Rice; roti; salad; sambar; aloo kundru; dahi vada; achar",Revised weekly menu photograph dated 27/09/2026,medium
-Tuesday,Snacks,"Gol gappa; coffee",Revised weekly menu photograph dated 27/09/2026,high
-Tuesday,Dinner,"Roti; rice; paneer aloo; sevai; masoor dal",Revised weekly menu photograph dated 27/09/2026; one item partly unclear,medium
-Wednesday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; uttapam; coconut chutney sambar",Revised weekly menu photograph dated 27/09/2026,medium
-Wednesday,Lunch,"Rice; roti; salad; masoor dal; chana dal pakoda; dahi; achar",Revised weekly menu photograph dated 27/09/2026; handwritten correction near dal row,medium
-Wednesday,Snacks,"Noodles; tea",Revised weekly menu photograph dated 27/09/2026,high
-Wednesday,Dinner,"Roti; rice; dal; seasonal vegetable; omelette curry",Revised weekly menu photograph dated 27/09/2026; some dinner text is faint,low
-Thursday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; idli; sambar; aloo sabzi",Revised weekly menu photograph dated 27/09/2026,medium
-Thursday,Lunch,"Jeera rice; roti; salad; moong dal; kabuli chana masala; aloo fry; achar",Revised weekly menu photograph dated 27/09/2026,medium
-Thursday,Snacks,"Chana chaat; coffee",Revised weekly menu photograph dated 27/09/2026; handwritten correction near snack row,medium
-Thursday,Dinner,"Roti; rice; masoor dal; mixed vegetable; ice cream",Revised weekly menu photograph dated 27/09/2026,medium
-Friday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; steamed idli/fried idli; sambar; coconut chutney",Revised weekly menu photograph dated 27/09/2026,medium
-Friday,Lunch,"Rice; roti; salad; mixed vegetable; fish curry; masoor dal; achar",Revised weekly menu photograph dated 27/09/2026,medium
-Friday,Snacks,"Pani chat; tea",Revised weekly menu photograph dated 27/09/2026,high
-Friday,Dinner,"Roti; rice; paneer-based curry; dal; ice cream",Revised weekly menu photograph dated 27/09/2026; handwritten item correction is unclear,low
-Saturday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; chole bhature",Revised weekly menu photograph dated 27/09/2026,medium
-Saturday,Lunch,"Rice; roti; salad; masoor dal; paneer masala; fish fry; mixed vegetable; achar",Revised weekly menu photograph dated 27/09/2026,medium
-Saturday,Snacks,"Samosa; coffee",Revised weekly menu photograph dated 27/09/2026,high
-Saturday,Dinner,"Paratha; chole; aloo matar; dahi",Revised weekly menu photograph dated 27/09/2026; text partly unclear,medium
-Sunday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; dosa; sambar; onion chutney",Revised weekly menu photograph dated 27/09/2026,medium
-Sunday,Lunch,"Ghee rice; puri; salad; aloo dum; chana masala; achar",Revised weekly menu photograph dated 27/09/2026,medium
-Sunday,Snacks,"No snacks listed / unclear in photograph",Revised weekly menu photograph dated 27/09/2026,low
-Sunday,Dinner,"Puri; roti; baingan choka; mixed dal; aloo matar; suji halwa with dry fruits",Revised weekly menu photograph dated 27/09/2026,medium
+day,meal,menu_items,menu_source_note,transcription_confidence,has_gravy,has_egg_curry,has_dry_vegetables
+Monday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; aloo paratha; tomato chutney",Revised weekly menu photograph dated 27/09/2026; printed item text transcribed where legible,medium,0,0,0
+Monday,Lunch,"Rice; roti; salad; moong dal; aloo parwal; mixed vegetable curry; achar",Revised weekly menu photograph dated 27/09/2026; some lower-row text is faint,medium,0,1,1
+Monday,Snacks,"Bread pakoda; tea",Revised weekly menu photograph dated 27/09/2026,high,0,0,0
+Monday,Dinner,"Roti; rice; chana dal; soya aloo; gulab jamun",Revised weekly menu photograph dated 27/09/2026,medium,0,0,1
+Tuesday,Breakfast,"Bread; butter; jam; milk; tea; banana/omelette; aloo poha; coconut chutney",Revised weekly menu photograph dated 27/09/2026; handwritten edits are partly unclear,medium0,0,0,0
+Tuesday,Lunch,"Rice; roti; salad; sambar; aloo kundru; dahi vada; achar",Revised weekly menu photograph dated 27/09/2026,medium,1,0,0
+Tuesday,Snacks,"Gol gappa; coffee",Revised weekly menu photograph dated 27/09/2026,high,0,0,0
+Tuesday,Dinner,"Roti; rice; paneer aloo; sevai; masoor dal",Revised weekly menu photograph dated 27/09/2026; one item partly unclear,medium,0,0,1
+Wednesday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; uttapam; coconut chutney sambar",Revised weekly menu photograph dated 27/09/2026,medium,0,0,0
+Wednesday,Lunch,"Rice; roti; salad; masoor dal; chana dal pakoda; dahi; achar",Revised weekly menu photograph dated 27/09/2026; handwritten correction near dal row,medium,0,1,1
+Wednesday,Snacks,"Noodles; tea",Revised weekly menu photograph dated 27/09/2026,high,0,0,0
+Wednesday,Dinner,"Roti; rice; dal; seasonal vegetable; omelette curry",Revised weekly menu photograph dated 27/09/2026; some dinner text is faint,low,0,0,1
+Thursday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; idli; sambar; aloo sabzi",Revised weekly menu photograph dated 27/09/2026,medium,0,0,0
+Thursday,Lunch,"Jeera rice; roti; salad; moong dal; kabuli chana masala; aloo fry; achar",Revised weekly menu photograph dated 27/09/2026,medium,1,0,0
+Thursday,Snacks,"Chana chaat; coffee",Revised weekly menu photograph dated 27/09/2026; handwritten correction near snack row,medium,0,0,0
+Thursday,Dinner,"Roti; rice; masoor dal; mixed vegetable; ice cream",Revised weekly menu photograph dated 27/09/2026,medium,0,0,1
+Friday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; steamed idli/fried idli; sambar; coconut chutney",Revised weekly menu photograph dated 27/09/2026,medium,0,0,0
+Friday,Lunch,"Rice; roti; salad; mixed vegetable; fish curry; masoor dal; achar",Revised weekly menu photograph dated 27/09/2026,medium,0,0,1
+Friday,Snacks,"Pani chat; tea",Revised weekly menu photograph dated 27/09/2026,high,0,0,0
+Friday,Dinner,"Roti; rice; paneer-based curry; dal; ice cream",Revised weekly menu photograph dated 27/09/2026; handwritten item correction is unclear,low,0,0,1
+Saturday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; chole bhature",Revised weekly menu photograph dated 27/09/2026,medium,0,0,1
+Saturday,Lunch,"Rice; roti; salad; masoor dal; paneer masala; fish fry; mixed vegetable; achar",Revised weekly menu photograph dated 27/09/2026,medium,1,0,0
+Saturday,Snacks,"Samosa; coffee",Revised weekly menu photograph dated 27/09/2026,high,0,0,0
+Saturday,Dinner,"Paratha; chole; aloo matar; dahi",Revised weekly menu photograph dated 27/09/2026; text partly unclear,medium,0,0,1
+Sunday,Breakfast,"Bread; butter; jam; milk; tea; banana/boiled egg; dosa; sambar; onion chutney",Revised weekly menu photograph dated 27/09/2026,medium,1,0,0
+Sunday,Lunch,"Ghee rice; puri; salad; aloo dum; chana masala; achar",Revised weekly menu photograph dated 27/09/2026,medium,1,0,0
+Sunday,Snacks,"No snacks listed / unclear in photograph",Revised weekly menu photograph dated 27/09/2026,low,0,0,0
+Sunday,Dinner,"Puri; roti; baingan choka; mixed dal; aloo matar; suji halwa with dry fruits",Revised weekly menu photograph dated 27/09/2026,medium,0,0,1

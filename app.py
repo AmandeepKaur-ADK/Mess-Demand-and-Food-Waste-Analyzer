@@ -1,29 +1,52 @@
+
 from pathlib import Path
 import streamlit as st
 import pandas as pd
 
 from src.data_loader import load_mess_data, data_quality_report
-from src.preprocessing import load_calendar, prepare_analysis_data, INGREDIENT_COLUMNS
-from src.menu_features import load_menu
+from src.preprocessing import (
+    load_calendar,
+    load_menu,
+    prepare_analysis_data,
+    INGREDIENT_COLUMNS,
+)
 from src.recommendation import make_daily_baseline
 
+
 ROOT = Path(__file__).parent
+
 DATA_PATH = ROOT / "data" / "raw" / "data.csv"
 CALENDAR_PATH = ROOT / "config" / "academic_calendar.csv"
 MENU_PATH = ROOT / "config" / "mess_menu.csv"
 
-st.set_page_config(page_title="Mess Demand Analyser", page_icon="🍽️", layout="wide")
+
+st.set_page_config(
+    page_title="Mess Demand Analyser",
+    page_icon="🍽️",
+    layout="wide"
+)
+
 st.title("Mess Demand Analyser")
-st.caption("Historical ingredient usage and academic-calendar context")
+st.caption(
+    "Historical ingredient usage and academic-calendar context"
+)
+
 
 try:
     raw = load_mess_data(DATA_PATH)
     calendar = load_calendar(CALENDAR_PATH)
     menu = load_menu(MENU_PATH)
-    data = prepare_analysis_data(raw, calendar)
+
+    data = prepare_analysis_data(
+        raw,
+        calendar,
+        menu
+    )
+
 except Exception as exc:
     st.error(f"Could not load project data: {exc}")
     st.stop()
+
 
 report = data_quality_report(raw)
 col1, col2, col3, col4 = st.columns(4)
@@ -39,13 +62,32 @@ st.line_chart(data.set_index("date")[INGREDIENT_COLUMNS[selected]])
 st.caption("Per-student values are daily recorded quantities divided by the recorded estimated student count.")
 
 st.subheader("2. Academic calendar context")
-context_cols = ["date", "weekday", "students_served_est", "calendar_events", "is_vacation", "is_holiday", "is_college_event", "is_academic_activity"]
+context_cols = ["date", "weekday", "students_served_est", "calendar_events", "is_vacation", "is_holiday", "is_college_event", "is_academic_activity", "is_academic_deadline"]
 st.dataframe(data[context_cols], use_container_width=True, hide_index=True)
 
 st.subheader("3. Weekly menu matched to each record")
-menu_cols = ["date", "weekday", "menu_summary", "menu_has_egg", "menu_has_gravy_or_curry", "menu_has_roti_or_paratha", "menu_has_rice"]
-st.dataframe(data[menu_cols], use_container_width=True, hide_index=True)
-st.caption("Menu text is transcribed from the revised menu photograph. Some handwritten/blurred items are uncertain; see config/mess_menu.csv.")
+
+menu_cols = [
+    "date",
+    "weekday",
+    "lunch_has_gravy",
+    "lunch_has_egg_curry",
+    "lunch_has_dry_vegetables",
+    "any_meal_has_gravy",
+    "any_meal_has_egg_curry",
+    "any_meal_has_dry_vegetables",
+]
+
+st.dataframe(
+    data[menu_cols],
+    use_container_width=True,
+    hide_index=True
+)
+
+st.caption(
+    "Menu indicators are derived from the revised weekly menu. "
+    "Daily ingredient totals cannot establish meal-specific consumption."
+)
 
 st.subheader("4. Daily preparation estimate")
 st.write("A transparent baseline using the median historical ingredient use per student from previous records. Same-weekday history is used when at least two prior records exist.")
